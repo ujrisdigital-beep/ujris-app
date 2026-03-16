@@ -1,0 +1,6 @@
+{
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "startCommand": "npm run preview -- --port 3000 --host 0.0.0.0"
+}
