@@ -22,7 +22,7 @@ export function Navigation() {
     { href: "#features", label: "Features" },
     { href: "#how-it-works", label: "How It Works" },
     { href: "#pricing", label: "Pricing" },
-    { href: "#our-story", label: "Our Story" },
+    { href: "/learn", label: "Resources" },
   ]
 
   return (

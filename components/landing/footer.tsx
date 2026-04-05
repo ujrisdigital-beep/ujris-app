@@ -11,16 +11,16 @@ const platformLinks = [
 ]
 
 const supportLinks = [
+  { label: "Learning Hub", href: "/learn" },
   { label: "Help Centre", href: "#" },
-  { label: "Contact Us", href: "#" },
-  { label: "Report a Bug", href: "#" },
-  { label: "Request a Feature", href: "#" },
+  { label: "Contact Us", href: "mailto:support@ujris.co.uk" },
+  { label: "Report a Bug", href: "mailto:bugs@ujris.co.uk" },
 ]
 
 const legalLinks = [
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms of Service", href: "#" },
-  { label: "Cookie Policy", href: "#" },
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Service", href: "/terms" },
+  { label: "Legal Disclaimer", href: "/disclaimer" },
   { label: "Accessibility", href: "#" },
 ]
 
