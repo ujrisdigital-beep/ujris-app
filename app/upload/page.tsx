@@ -71,7 +71,7 @@ export default function UploadPage() {
       localStorage.setItem('ujris_case_id', caseId);
 
       // Step 3: Upload files (max 5 per request — backend limit)
-      const BATCH_SIZE = 5;
+      const BATCH_SIZE = 10;
       let uploaded = 0;
 
       for (let i = 0; i < files.length; i += BATCH_SIZE) {
