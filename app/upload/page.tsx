@@ -26,7 +26,7 @@ export default function UploadPage() {
     formData.append('caseId', caseId);
 
     try {
-      const res = await fetch('https://female-norina-ujrisai-6e069b82.koyeb.app/api/upload', {
+      const res = await fetch('https://ujris-backend.koyeb.app/api/upload', {
         method: 'POST',
         body: formData,
       });
