@@ -145,7 +145,7 @@ export default function TermsPage() {
             these Terms of Service.
           </p>
           <Button asChild className="bg-[#c9a84c] hover:bg-[#b8973f] text-[#0f172a]">
-            <a href="https://tally.so/r/YOUR_TALLY_FORM_ID" target="_blank" rel="noopener noreferrer">
+            <a href="https://tally.so/r/eq2Pqe" target="_blank" rel="noopener noreferrer">
               Start Your Case
             </a>
           </Button>

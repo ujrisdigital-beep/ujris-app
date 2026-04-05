@@ -260,7 +260,7 @@ export default function LearnPage() {
                 Pricing
               </Link>
               <Button asChild className="bg-[#c9a84c] hover:bg-[#b8973f] text-[#0f172a]">
-                <a href="https://tally.so/r/YOUR_TALLY_FORM_ID" target="_blank" rel="noopener noreferrer">
+                <a href="https://tally.so/r/eq2Pqe" target="_blank" rel="noopener noreferrer">
                   Start Your Case
                 </a>
               </Button>
@@ -290,7 +290,7 @@ export default function LearnPage() {
                 Pricing
               </Link>
               <Button asChild className="bg-[#c9a84c] hover:bg-[#b8973f] text-[#0f172a] w-full">
-                <a href="https://tally.so/r/YOUR_TALLY_FORM_ID" target="_blank" rel="noopener noreferrer">
+                <a href="https://tally.so/r/eq2Pqe" target="_blank" rel="noopener noreferrer">
                   Start Your Case
                 </a>
               </Button>
@@ -459,7 +459,7 @@ export default function LearnPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg" className="bg-[#c9a84c] hover:bg-[#b8973f] text-[#0f172a] text-lg px-8">
-              <a href="https://tally.so/r/YOUR_TALLY_FORM_ID" target="_blank" rel="noopener noreferrer">
+              <a href="https://tally.so/r/eq2Pqe" target="_blank" rel="noopener noreferrer">
                 Start Your Case - £49 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
             </Button>
