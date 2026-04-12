@@ -2,106 +2,128 @@
 // This file contains all educational content for the learning hub
 
 export interface Video {
-  title: string;
-  fullUrl: string;
-  embedUrl: string;
-  category: string;
-  description: string;
+  id: string
+  title: string
+  url: string
+  embedUrl: string
+  source: string
+  duration?: string
+  category: "pip" | "employment" | "parking" | "insurance" | "general"
+  description: string
 }
 
 export interface Guide {
-  id: string;
-  title: string;
-  description: string;
-  url: string;
-  type: "pdf" | "template" | "checklist";
-  category: "pip" | "employment" | "parking" | "insurance" | "general";
-  downloadable: boolean;
+  id: string
+  title: string
+  description: string
+  url: string
+  type: "pdf" | "template" | "checklist"
+  category: "pip" | "employment" | "parking" | "insurance" | "general"
+  downloadable: boolean
 }
 
 export interface Feature {
-  id: string;
-  title: string;
-  description: string;
-  icon: string;
-  category: string;
+  id: string
+  title: string
+  description: string
+  icon: string
+  category: string
 }
 
 export const videos: Video[] = [
   {
+    id: "video-pip-1",
     title: "Challenging a PIP Decision",
-    fullUrl: "https://www.youtube.com/watch?v=BVqMktWiQaQ",
+    url: "https://www.youtube.com/watch?v=BVqMktWiQaQ",
     embedUrl: "https://www.youtube.com/embed/BVqMktWiQaQ",
-    category: "PIP",
-    description: "Official guidance on Mandatory Reconsideration and the full appeal process to tribunal"
+    source: "YouTube",
+    category: "pip",
+    description: "Official guidance on Mandatory Reconsideration and the full appeal process to tribunal",
   },
   {
+    id: "video-pip-2",
     title: "Easy Guide: Logging A DWP Tribunal",
-    fullUrl: "https://www.youtube.com/watch?v=OdgCtn3QYLM",
+    url: "https://www.youtube.com/watch?v=OdgCtn3QYLM",
     embedUrl: "https://www.youtube.com/embed/OdgCtn3QYLM",
-    category: "PIP",
-    description: "Step-by-step walkthrough on how to log your appeal with DWP tribunal service"
+    source: "YouTube",
+    category: "pip",
+    description: "Step-by-step walkthrough on how to log your appeal with DWP tribunal service",
   },
   {
+    id: "video-pip-3",
     title: "How to appeal a Work Capability Assessment",
-    fullUrl: "https://www.youtube.com/watch?v=G2tOqIW9p7s",
+    url: "https://www.youtube.com/watch?v=G2tOqIW9p7s",
     embedUrl: "https://www.youtube.com/embed/G2tOqIW9p7s",
-    category: "PIP",
-    description: "Advicenow official guide – Mandatory Reconsideration, appeal form, evidence and descriptors"
+    source: "YouTube",
+    category: "pip",
+    description: "Advicenow official guide - Mandatory Reconsideration, appeal form, evidence and descriptors",
   },
   {
+    id: "video-pip-4",
     title: "How to Appeal a PIP Decision: Step Three - Preparing For The Hearing",
-    fullUrl: "https://www.youtube.com/watch?v=tIHjSpNNbQo",
+    url: "https://www.youtube.com/watch?v=tIHjSpNNbQo",
     embedUrl: "https://www.youtube.com/embed/tIHjSpNNbQo",
-    category: "PIP",
-    description: "Scope official video – what to expect and how to prepare for your PIP tribunal hearing"
+    source: "YouTube",
+    category: "pip",
+    description: "Scope official video - what to expect and how to prepare for your PIP tribunal hearing",
   },
   {
+    id: "video-employment-1",
     title: "Unpacking Employment Tribunal [Part 1]: Your Guide",
-    fullUrl: "https://www.youtube.com/watch?v=UpXPqAYPOOI",
+    url: "https://www.youtube.com/watch?v=UpXPqAYPOOI",
     embedUrl: "https://www.youtube.com/embed/UpXPqAYPOOI",
-    category: "Employment",
-    description: "Full guide to employment tribunal process, time limits and preparing your claim"
+    source: "YouTube",
+    category: "employment",
+    description: "Full guide to employment tribunal process, time limits and preparing your claim",
   },
   {
+    id: "video-employment-2",
     title: "Employment Tribunal help",
-    fullUrl: "https://www.youtube.com/watch?v=5FwMw3N21M8",
+    url: "https://www.youtube.com/watch?v=5FwMw3N21M8",
     embedUrl: "https://www.youtube.com/embed/5FwMw3N21M8",
-    category: "Employment",
-    description: "Practical help for claimants going to employment tribunal"
+    source: "YouTube",
+    category: "employment",
+    description: "Practical help for claimants going to employment tribunal",
   },
   {
+    id: "video-general-1",
     title: "What is small claims mediation?",
-    fullUrl: "https://www.youtube.com/watch?v=Fm4hjpA72vA",
+    url: "https://www.youtube.com/watch?v=Fm4hjpA72vA",
     embedUrl: "https://www.youtube.com/embed/Fm4hjpA72vA",
-    category: "SmallClaims",
-    description: "HMCTS official video explaining the free small claims mediation service"
+    source: "YouTube",
+    category: "general",
+    description: "HMCTS official video explaining the free small claims mediation service",
   },
   {
+    id: "video-general-2",
     title: "Small Claims Mediation Service",
-    fullUrl: "https://www.youtube.com/watch?v=tKesfMqSOfQ",
+    url: "https://www.youtube.com/watch?v=tKesfMqSOfQ",
     embedUrl: "https://www.youtube.com/embed/tKesfMqSOfQ",
-    category: "SmallClaims",
-    description: "HMCTS presentation on how the mediation service works and how to use it"
+    source: "YouTube",
+    category: "general",
+    description: "HMCTS presentation on how the mediation service works and how to use it",
   },
   {
+    id: "video-general-3",
     title: "How do the courts treat litigants-in-person?",
-    fullUrl: "https://www.youtube.com/watch?v=KaVffu5BiYc",
+    url: "https://www.youtube.com/watch?v=KaVffu5BiYc",
     embedUrl: "https://www.youtube.com/embed/KaVffu5BiYc",
-    category: "General",
-    description: "Clear guidance on how UK courts handle self-represented litigants"
+    source: "YouTube",
+    category: "general",
+    description: "Clear guidance on how UK courts handle self-represented litigants",
   },
   {
+    id: "video-general-4",
     title: "Should I represent myself in Court? UK General Litigation",
-    fullUrl: "https://www.youtube.com/watch?v=AwE5ZDF6Wa8",
+    url: "https://www.youtube.com/watch?v=AwE5ZDF6Wa8",
     embedUrl: "https://www.youtube.com/embed/AwE5ZDF6Wa8",
-    category: "General",
-    description: "Key advice for anyone considering going to court without a solicitor"
+    source: "YouTube",
+    category: "general",
+    description: "Key advice for anyone considering going to court without a solicitor",
   },
-];
+]
 
 export const guides: Guide[] = [
-  // PIP Guides
   {
     id: "guide-pip-1",
     title: "PIP Appeal Complete Guide",
@@ -109,7 +131,7 @@ export const guides: Guide[] = [
     url: "/guides/pip-appeal-guide.pdf",
     type: "pdf",
     category: "pip",
-    downloadable: true
+    downloadable: true,
   },
   {
     id: "guide-pip-2",
@@ -118,7 +140,7 @@ export const guides: Guide[] = [
     url: "/guides/pip-descriptors-checklist.pdf",
     type: "checklist",
     category: "pip",
-    downloadable: true
+    downloadable: true,
   },
   {
     id: "guide-pip-3",
@@ -127,9 +149,8 @@ export const guides: Guide[] = [
     url: "/templates/pip-evidence-template.xlsx",
     type: "template",
     category: "pip",
-    downloadable: true
+    downloadable: true,
   },
-  // Employment Guides
   {
     id: "guide-emp-1",
     title: "Employment Tribunal Guide",
@@ -137,7 +158,7 @@ export const guides: Guide[] = [
     url: "/guides/employment-tribunal-guide.pdf",
     type: "pdf",
     category: "employment",
-    downloadable: true
+    downloadable: true,
   },
   {
     id: "guide-emp-2",
@@ -146,7 +167,7 @@ export const guides: Guide[] = [
     url: "/templates/witness-statement-template.docx",
     type: "template",
     category: "employment",
-    downloadable: true
+    downloadable: true,
   },
   {
     id: "guide-emp-3",
@@ -155,7 +176,7 @@ export const guides: Guide[] = [
     url: "/templates/schedule-of-loss.xlsx",
     type: "template",
     category: "employment",
-    downloadable: true
+    downloadable: true,
   },
   {
     id: "guide-emp-4",
@@ -164,7 +185,7 @@ export const guides: Guide[] = [
     url: "/templates/evidence-timeline.xlsx",
     type: "template",
     category: "employment",
-    downloadable: true
+    downloadable: true,
   },
   {
     id: "guide-emp-5",
@@ -173,9 +194,8 @@ export const guides: Guide[] = [
     url: "/templates/bundle-index.docx",
     type: "template",
     category: "employment",
-    downloadable: true
+    downloadable: true,
   },
-  // Parking Guides
   {
     id: "guide-park-1",
     title: "Parking Ticket Appeal Guide",
@@ -183,7 +203,7 @@ export const guides: Guide[] = [
     url: "/guides/parking-ticket-appeal.pdf",
     type: "pdf",
     category: "parking",
-    downloadable: true
+    downloadable: true,
   },
   {
     id: "guide-park-2",
@@ -192,9 +212,8 @@ export const guides: Guide[] = [
     url: "/templates/popla-appeal-template.docx",
     type: "template",
     category: "parking",
-    downloadable: true
+    downloadable: true,
   },
-  // Insurance Guides
   {
     id: "guide-ins-1",
     title: "Insurance Complaint Guide",
@@ -202,7 +221,7 @@ export const guides: Guide[] = [
     url: "/guides/insurance-complaint-guide.pdf",
     type: "pdf",
     category: "insurance",
-    downloadable: true
+    downloadable: true,
   },
   {
     id: "guide-ins-2",
@@ -211,9 +230,8 @@ export const guides: Guide[] = [
     url: "/templates/fos-complaint-template.docx",
     type: "template",
     category: "insurance",
-    downloadable: true
+    downloadable: true,
   },
-  // General Guides
   {
     id: "guide-gen-1",
     title: "Self-Represented Litigant Handbook",
@@ -221,7 +239,7 @@ export const guides: Guide[] = [
     url: "/guides/litigant-handbook.pdf",
     type: "pdf",
     category: "general",
-    downloadable: true
+    downloadable: true,
   },
   {
     id: "guide-gen-2",
@@ -230,7 +248,7 @@ export const guides: Guide[] = [
     url: "/templates/sar-template.docx",
     type: "template",
     category: "general",
-    downloadable: true
+    downloadable: true,
   },
   {
     id: "guide-gen-3",
@@ -239,9 +257,9 @@ export const guides: Guide[] = [
     url: "/templates/foi-template.docx",
     type: "template",
     category: "general",
-    downloadable: true
+    downloadable: true,
   },
-];
+]
 
 export const features: Feature[] = [
   {
@@ -249,86 +267,86 @@ export const features: Feature[] = [
     title: "Unlimited Document Uploads",
     description: "Upload any number of documents with no size limits. We process everything.",
     icon: "Upload",
-    category: "core"
+    category: "core",
   },
   {
     id: "feat-2",
     title: "Forensic AI Analysis",
     description: "Our AI examines every document for contradictions, timeline inconsistencies, and hidden patterns.",
     icon: "Search",
-    category: "ai"
+    category: "ai",
   },
   {
     id: "feat-3",
     title: "Anchor Lie Detection",
     description: "Proprietary technology that identifies false statements and evidential anchors in opponent documents.",
     icon: "Target",
-    category: "ai"
+    category: "ai",
   },
   {
     id: "feat-4",
     title: "Automatic Timeline Generation",
     description: "AI creates a chronological timeline of all events from your documents.",
     icon: "Clock",
-    category: "ai"
+    category: "ai",
   },
   {
     id: "feat-5",
     title: "Legal Summary Report",
     description: "Plain English breakdown of your case strengths, weaknesses, and strategy recommendations.",
     icon: "FileText",
-    category: "output"
+    category: "output",
   },
   {
     id: "feat-6",
     title: "Ready-to-Send Appeal Letter",
     description: "Professionally drafted appeal letter customized to your specific case.",
     icon: "Mail",
-    category: "output"
+    category: "output",
   },
   {
     id: "feat-7",
     title: "Password-Protected Delivery",
     description: "Your complete case pack delivered securely with encryption.",
     icon: "Lock",
-    category: "security"
+    category: "security",
   },
   {
     id: "feat-8",
     title: "30-Day Auto-Delete",
     description: "All data automatically deleted after 30 days for your privacy.",
     icon: "Trash2",
-    category: "security"
+    category: "security",
   },
   {
     id: "feat-9",
     title: "UK GDPR Compliant",
     description: "Full compliance with UK data protection law. Your data is never shared.",
     icon: "Shield",
-    category: "security"
+    category: "security",
   },
   {
     id: "feat-10",
     title: "Evidence Matrix",
     description: "Visual mapping of evidence to claims for clear case presentation.",
     icon: "Grid",
-    category: "output"
+    category: "output",
   },
   {
     id: "feat-11",
     title: "Contradiction Highlighter",
     description: "Automatically highlights contradictions between documents.",
     icon: "AlertTriangle",
-    category: "ai"
+    category: "ai",
   },
   {
     id: "feat-12",
     title: "Citation Generator",
     description: "Properly formatted legal citations for your documents.",
     icon: "Quote",
-    category: "output"
+    category: "output",
   },
-];
+]
 
 export const categories = [
   { id: "all", label: "All Resources" },
@@ -337,6 +355,6 @@ export const categories = [
   { id: "parking", label: "Parking Tickets" },
   { id: "insurance", label: "Insurance" },
   { id: "general", label: "General Legal" },
-] as const;
+] as const
 
-export type Category = typeof categories[number]["id"];
+export type Category = typeof categories[number]["id"]

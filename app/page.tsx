@@ -1,14 +1,14 @@
-import { Navigation } from "@/components/landing/navigation"
-import { HeroSection } from "@/components/landing/hero-section"
-import { StatsStrip } from "@/components/landing/stats-strip"
-import { PainPoints } from "@/components/landing/pain-points"
-import { ThreeClickSection } from "@/components/landing/three-click-section"
-import { FeaturesGrid } from "@/components/landing/features-grid"
 import { CaseTypes } from "@/components/landing/case-types"
-import { TestimonialsSection } from "@/components/landing/testimonials-section"
-import { PhilosophyStrip } from "@/components/landing/philosophy-strip"
 import { EmailSignup } from "@/components/landing/email-signup"
+import { FeaturesGrid } from "@/components/landing/features-grid"
 import { Footer } from "@/components/landing/footer"
+import { HeroSection } from "@/components/landing/hero-section"
+import { Navigation } from "@/components/landing/navigation"
+import { PainPoints } from "@/components/landing/pain-points"
+import { PhilosophyStrip } from "@/components/landing/philosophy-strip"
+import { StatsStrip } from "@/components/landing/stats-strip"
+import { TestimonialsSection } from "@/components/landing/testimonials-section"
+import { ThreeClickSection } from "@/components/landing/three-click-section"
 
 export default function Home() {
   return (
@@ -20,54 +20,64 @@ export default function Home() {
       <ThreeClickSection />
       <FeaturesGrid />
       <CaseTypes />
-      {/* SINGLE PRICE SECTION */}
-      <section className="py-20 bg-white">
+
+      <section id="pricing" className="bg-white py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#0f172a] mb-4">
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <h2 className="mb-4 font-serif text-3xl font-bold text-[#0f172a] md:text-4xl">
               Simple, Transparent Pricing
             </h2>
-            <p className="text-slate-600 text-lg">
-              One payment. Your case analyzed. No hidden fees.
-            </p>
+            <p className="text-lg text-slate-600">One payment. Your case analyzed. No hidden fees.</p>
           </div>
 
-          <div className="max-w-md mx-auto">
-            <div className="bg-white rounded-2xl shadow-xl border-2 border-[#c9a84c] p-8 text-center relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-[#c9a84c] text-[#0f172a] px-4 py-1 rounded-full text-sm font-semibold">
+          <div className="mx-auto max-w-md">
+            <div className="relative rounded-2xl border-2 border-[#c9a84c] bg-white p-8 text-center shadow-xl">
+              <div className="absolute left-1/2 top-[-1rem] -translate-x-1/2 transform">
+                <span className="rounded-full bg-[#c9a84c] px-4 py-1 text-sm font-semibold text-[#0f172a]">
                   Most Popular
                 </span>
               </div>
 
               <div className="mb-6">
-                <div className="text-5xl font-bold text-[#0f172a]">£49</div>
+                <div className="text-5xl font-bold text-[#0f172a]">GBP 49</div>
                 <div className="text-slate-500">one-time payment</div>
               </div>
 
-              <ul className="space-y-3 text-left mb-8">
+              <ul className="mb-8 space-y-3 text-left">
                 <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <svg className="h-5 w-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
                   <span>Unlimited document uploads (any size)</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <svg className="h-5 w-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
                   <span>AI legal summary</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <svg className="h-5 w-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
                   <span>Timeline generation</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <svg className="h-5 w-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
                   <span>Ready-to-send appeal letter</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <svg className="h-5 w-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
                   <span>Password-protected PDF</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <svg className="h-5 w-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
                   <span>7-day refund if not useful</span>
                 </li>
               </ul>
@@ -75,18 +85,20 @@ export default function Home() {
               <a
                 href="https://tally.so/r/eq2Pqe"
                 target="_blank"
-                className="block w-full bg-[#c9a84c] hover:bg-[#b8973f] text-[#0f172a] font-semibold py-3 px-6 rounded-lg transition text-center"
+                rel="noopener noreferrer"
+                className="block w-full rounded-lg bg-[#c9a84c] px-6 py-3 text-center font-semibold text-[#0f172a] transition hover:bg-[#b8973f]"
               >
-                Start Your Case — £49 →
+                Start Your Case - GBP 49 -&gt;
               </a>
 
-              <p className="text-xs text-slate-500 mt-4">
-                ⚡ 90-minute delivery • 🔒 Secure payment • 💵 7-day refund
+              <p className="mt-4 text-xs text-slate-500">
+                90-minute delivery | Secure payment | 7-day refund
               </p>
             </div>
           </div>
         </div>
       </section>
+
       <TestimonialsSection />
       <PhilosophyStrip />
       <EmailSignup />

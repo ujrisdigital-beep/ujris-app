@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 
-const API = 'https://ujris-simple-backend.onrender.com';
+const API =
+  process.env.NEXT_PUBLIC_UPLOAD_API_URL || 'https://ujris-simple-backend.onrender.com';
 
 export default function UploadPage() {
   const [files, setFiles] = useState<File[]>([]);
@@ -29,7 +30,7 @@ export default function UploadPage() {
       const caseId = Date.now().toString();
 
       const formData = new FormData();
-      files.forEach(file => formData.append('files', file));
+      files.forEach((file) => formData.append('files', file));
       formData.append('caseId', caseId);
 
       const res = await fetch(`${API}/api/upload`, {
@@ -51,7 +52,6 @@ export default function UploadPage() {
       setTimeout(() => {
         window.location.href = `https://tally.so/r/eq2Pqe?caseId=${data.caseId}`;
       }, 2000);
-
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : 'Upload failed';
       setError(message);
@@ -63,27 +63,25 @@ export default function UploadPage() {
 
   return (
     <div className="min-h-screen bg-[#f8fafc]">
-      <header className="bg-[#0f172a] text-white py-4 px-6">
-        <div className="max-w-4xl mx-auto flex items-center justify-between">
-          <a href="/" className="font-serif font-bold text-xl">UJRIS</a>
-          <a href="https://tally.so/r/eq2Pqe" className="text-slate-300 hover:text-white text-sm">
-            Skip upload →
+      <header className="bg-[#0f172a] px-6 py-4 text-white">
+        <div className="mx-auto flex max-w-4xl items-center justify-between">
+          <a href="/" className="font-serif text-xl font-bold">
+            UJRIS
+          </a>
+          <a href="https://tally.so/r/eq2Pqe" className="text-sm text-slate-300 hover:text-white">
+            Skip upload -&gt;
           </a>
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-4 py-12">
-        <div className="text-center mb-8">
-          <h1 className="font-serif text-4xl font-bold text-[#0f172a] mb-4">
-            Upload Your Evidence
-          </h1>
-          <p className="text-slate-600 text-lg">
-            Any file type. Up to 100MB per file. Unlimited files.
-          </p>
+      <main className="mx-auto max-w-4xl px-4 py-12">
+        <div className="mb-8 text-center">
+          <h1 className="mb-4 font-serif text-4xl font-bold text-[#0f172a]">Upload Your Evidence</h1>
+          <p className="text-lg text-slate-600">Any file type. Up to 100MB per file. Unlimited files.</p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-xl p-8">
-          <div className="border-2 border-dashed border-[#c9a84c] rounded-xl p-8 text-center">
+        <div className="rounded-2xl bg-white p-8 shadow-xl">
+          <div className="rounded-xl border-2 border-dashed border-[#c9a84c] p-8 text-center">
             <input
               type="file"
               multiple
@@ -93,14 +91,12 @@ export default function UploadPage() {
             />
             {files.length > 0 && (
               <div className="mt-4">
-                <p className="text-sm text-slate-600 font-medium">
-                  {files.length} file(s) selected
-                </p>
-                <ul className="text-left text-xs text-slate-500 mt-2 max-h-40 overflow-y-auto space-y-1">
-                  {files.map((f, i) => (
-                    <li key={i} className="flex justify-between">
-                      <span>{f.name}</span>
-                      <span className="text-slate-400">{(f.size / 1024 / 1024).toFixed(2)} MB</span>
+                <p className="text-sm font-medium text-slate-600">{files.length} file(s) selected</p>
+                <ul className="mt-2 max-h-40 space-y-1 overflow-y-auto text-left text-xs text-slate-500">
+                  {files.map((file, index) => (
+                    <li key={index} className="flex justify-between">
+                      <span>{file.name}</span>
+                      <span className="text-slate-400">{(file.size / 1024 / 1024).toFixed(2)} MB</span>
                     </li>
                   ))}
                 </ul>
@@ -109,14 +105,14 @@ export default function UploadPage() {
           </div>
 
           {error && (
-            <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+            <div className="mt-4 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700">
               {error}
             </div>
           )}
 
           {status && !uploaded && (
-            <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg text-blue-700 text-sm text-center">
-              ⏳ {status}
+            <div className="mt-4 rounded-lg border border-blue-200 bg-blue-50 p-3 text-center text-sm text-blue-700">
+              Upload in progress: {status}
             </div>
           )}
 
@@ -124,19 +120,20 @@ export default function UploadPage() {
             <button
               onClick={handleUpload}
               disabled={uploading || files.length === 0}
-              className="mt-6 w-full bg-[#c9a84c] hover:bg-[#b8973f] text-[#0f172a] font-semibold py-3 px-6 rounded-lg transition disabled:opacity-50"
+              className="mt-6 w-full rounded-lg bg-[#c9a84c] px-6 py-3 font-semibold text-[#0f172a] transition hover:bg-[#b8973f] disabled:opacity-50"
             >
-              {uploading ? status || 'Uploading...' : `Upload ${files.length} file(s) — Then Pay £49`}
+              {uploading ? status || 'Uploading...' : `Upload ${files.length} file(s) - Then Pay GBP 49`}
             </button>
           ) : (
-            <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg text-center">
-              <p className="text-green-800 font-medium">✅ {status}</p>
-              <p className="text-green-600 text-sm mt-1">Redirecting to payment...</p>
+            <div className="mt-6 rounded-lg border border-green-200 bg-green-50 p-4 text-center">
+              <p className="font-medium text-green-800">Upload complete. {status}</p>
+              <p className="mt-1 text-sm text-green-600">Redirecting to payment...</p>
             </div>
           )}
 
-          <p className="text-xs text-slate-400 text-center mt-6">
-            Files are encrypted in transit. No human access. Auto-deleted after 30 days.
+          <p className="mt-6 text-center text-xs text-slate-400">
+            Files are encrypted in transit, processed in the backend, and auto-deleted after 30
+            days unless retention is required for delivery or support.
           </p>
         </div>
       </main>

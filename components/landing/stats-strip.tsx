@@ -10,29 +10,27 @@ const stats = [
     label: "ACAS cases settle before tribunal",
   },
   {
-    value: "£56,000",
+    value: "GBP 56,000",
     label: "Vento upper band",
   },
   {
     value: "94%",
-    label: "BAME claimants self-represented",
+    label: "claimants self-represented",
   },
 ]
 
 export function StatsStrip() {
   return (
-    <section className="bg-[#1e293b] py-8 border-y border-[#c9a84c]/20">
+    <section className="border-y border-[#c9a84c]/20 bg-[#1e293b] py-8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="text-center animate-in fade-in slide-in-from-bottom-4 duration-500"
+              className="animate-in text-center fade-in slide-in-from-bottom-4 duration-500"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="text-2xl md:text-3xl font-bold text-[#c9a84c] mb-1">
-                {stat.value}
-              </div>
+              <div className="mb-1 text-2xl font-bold text-[#c9a84c] md:text-3xl">{stat.value}</div>
               <div className="text-sm text-white/70">{stat.label}</div>
             </div>
           ))}

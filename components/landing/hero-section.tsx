@@ -1,13 +1,13 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowRight, Shield, Lock, Heart } from "lucide-react"
+import { ArrowRight, Heart, Lock, Shield } from "lucide-react"
+
 import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-[#0f172a] overflow-hidden">
-      {/* Background Pattern */}
+    <section className="relative min-h-screen overflow-hidden bg-[#0f172a]">
       <div className="absolute inset-0 opacity-5">
         <div
           className="absolute inset-0"
@@ -17,54 +17,48 @@ export function HeroSection() {
         />
       </div>
 
-      {/* Gradient Overlay */}
       <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#0f172a] to-transparent" />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-        <div className="text-center max-w-4xl mx-auto">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-[#c9a84c]/30 mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <span className="text-[#c9a84c] text-sm font-medium">AI-Powered</span>
-            <span className="text-white/40">·</span>
-            <span className="text-white/80 text-sm">UK Law</span>
-            <span className="text-white/40">·</span>
-            <span className="text-white/80 text-sm">Free to Start</span>
+      <div className="relative mx-auto max-w-7xl px-4 pb-20 pt-32 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl text-center">
+          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#c9a84c]/30 bg-white/5 px-4 py-2 animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <span className="text-sm font-medium text-[#c9a84c]">AI-Powered</span>
+            <span className="text-white/40">/</span>
+            <span className="text-sm text-white/80">UK Law</span>
+            <span className="text-white/40">/</span>
+            <span className="text-sm text-white/80">Free to Start</span>
           </div>
 
-          {/* Headline */}
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
+          <h1 className="mb-6 font-serif text-4xl font-bold leading-tight text-white animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100 sm:text-5xl md:text-6xl lg:text-7xl">
             Justice Shouldn&apos;t Require a{" "}
             <span className="text-[#c9a84c]">Lawyer</span> to Survive
           </h1>
 
-          {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-[#c9a84c] font-medium mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
+          <p className="mb-4 text-xl font-medium text-[#c9a84c] animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200 md:text-2xl">
             Turn evidence into action. Turn discrimination into justice.
           </p>
 
-          {/* Description */}
-          <p className="text-lg text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-            Intelligence-driven legal power for self-represented litigants. Built for BAME
-            communities — designed for everyone facing injustice.
+          <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-white/70 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+            Intelligence-driven legal support for self-represented litigants. Built with racial
+            justice in mind, and designed for anyone facing institutional injustice.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
+          <div className="mb-12 flex flex-col items-center justify-center gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400 sm:flex-row">
             <Button
               asChild
               size="lg"
-              className="bg-[#c9a84c] text-[#0f172a] hover:bg-[#d4b85c] font-semibold px-8 py-6 text-lg group"
+              className="group bg-[#c9a84c] px-8 py-6 text-lg font-semibold text-[#0f172a] hover:bg-[#d4b85c]"
             >
-              <Link href="https://tally.so/r/eq2Pqe" target="_blank">
+              <Link href="https://tally.so/r/eq2Pqe" target="_blank" rel="noopener noreferrer">
                 Start Your Case
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
             <Button
               asChild
               size="lg"
               variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-8 py-6 text-lg"
+              className="border-white/30 px-8 py-6 text-lg text-white hover:border-white/50 hover:bg-white/10"
             >
               <Link href="#features">See All Tools</Link>
             </Button>
@@ -72,21 +66,20 @@ export function HeroSection() {
               asChild
               size="lg"
               variant="ghost"
-              className="text-white/80 hover:text-white hover:bg-white/5 px-8 py-6 text-lg"
+              className="px-8 py-6 text-lg text-white/80 hover:bg-white/5 hover:text-white"
             >
               <Link href="#how-it-works">How It Works</Link>
             </Button>
           </div>
 
-          {/* Trust Badges */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/60 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
             <div className="flex items-center gap-2">
               <Shield className="h-4 w-4 text-[#c9a84c]" />
-              <span>Free to start — no card needed</span>
+              <span>Free to start - no card needed</span>
             </div>
             <div className="flex items-center gap-2">
               <Lock className="h-4 w-4 text-[#c9a84c]" />
-              <span>Your data stays on your device</span>
+              <span>Processed by the system, not handled manually</span>
             </div>
             <div className="flex items-center gap-2">
               <Heart className="h-4 w-4 text-[#c9a84c]" />
