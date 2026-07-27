@@ -1,0 +1,6 @@
+{
+  "name": "UJRIS — Justice Intelligence Platform",
+  "description": "UK Discrimination Law & Legal Intelligence Operating System featuring the 10-Agent UJU Cycle, Tyler Wise Case Scoring, ET1 Generator, Schedule of Loss Calculator, Evidence Chain of Custody, and Self-Improving Engine.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
